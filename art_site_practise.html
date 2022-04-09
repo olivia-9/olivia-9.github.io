@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="art_site.css">
+</head>
+<body>
+
+
+  <!-- <h1>Art Gallery Online</h1>
+  <h2>Gallery</h2>
+  <h3></h3>
+  <p>Menu</p>
+  <p>About</p>
+  <p>Home</p>
+  <p>Gallery</p>
+  <p>Blog</p>
+  <p>Tutorials</p>
+  <p>Quiz</p> -->
+
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div class="section" id="home" data-label="Home">Home</div>
+  <div class="section" id="about" data-label="About">About</div>
+  <div class="section" id="gallery" data-label="Gallery">Gallery</div>
+  <div class="section" id="blog" data-label="Blog">Blog</div>
+  <div class="section" id="tutorials" data-label="Tutorials">Tutorials</div>
+  <div class="section" id="quiz" data-label="Quiz">Quiz</div>
+  
+  <!-- Navigation menu at bottom of page. Each link will take you to the section on the page. -->
+  <!-- <nav class="nav">
+    <div class="nav-item">
+      <a href="#home" class="nav-link"></a>
+      <span class="nav-label">Home</span>
+    </div>
+    <div class="nav-item">
+      <a href="#about" class="nav-link"></a>
+      <span class="nav-label">About</span>
+    </div>
+    <div class="nav-item">
+      <a href="#gallery" class="nav-link"></a>
+      <span class="nav-label">Gallery</span>
+    </div>
+    <div class="nav-item">
+      <a href="#blog" class="nav-link"></a>
+      <span class="nav-label">Blog</span>
+    </div>
+    <div class="nav-item">
+      <a href="#tutorials" class="nav-link"></a>
+      <span class="nav-label">Tutorials</span>
+    </div>
+    <div class="nav-item">
+      <a href="#quiz" class="nav-link"></a>
+      <span class="nav-label">Quiz</span>
+    </div>
+  </nav> -->
+  <script>
+    function activateNavigation() {
+      const sections = document.querySelectorAll(".section");
+      const navContainer = document.createElement("nav");
+      const navItems = Array.from(sections).map(section => {
+          return`
+              <div class="nav-item" data-for-section="${section.id}">
+                <a href="#${section.id}" class="nav-link"></a>
+                <span class="nav-label">${section.dataset.label}</span>
+              </div>
+
+          `;
+      });
+
+      console.log(sections);
+      console.log(navItems);
+    }
+
+    activateNavigation();
+  </script>
+
+
+</body>
+</html>
